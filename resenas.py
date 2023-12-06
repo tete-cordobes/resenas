@@ -47,4 +47,3 @@ if st.sidebar.button("Calcular Fechas de Reviews"):
         df_reviews = calcular_fechas_de_reviews(url, fecha_revision, codigo_factura, nombre_negocio, 
                                                 nombre_proyecto, cantidad_reviews, reviews_por_mes, incremento_mensual)
         st.write(df_reviews)
-        st.download_button("Descargar CSV", df_reviews.to_csv(index=False), "reviews_por_mes.csv", "text/csv", key='download-csv')
